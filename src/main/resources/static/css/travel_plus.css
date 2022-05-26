@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+.navbar {
+    background-color: #FF5F5D !important;
+}
+
+li a {
+    color: #ffff !important; 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card-travel {
+    margin: 1%;
+    display: inline-block;
+}
+
+.bg-dark {
+    margin: 1%;
+}
+
+.icons {
+    display: inline-block;
+    color: #00CCBF;
+    margin: 5%;
+}
+
+.icons img {
+    margin-left: 35%;
+}
+
+.space-icons {
+    padding: 20%;
+}
+
+.bus {
+    max-width: 100%;
+}
