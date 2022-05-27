@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="from">Origem</label>
-                    <input type="text" class="form-control" id="from" aria-describedby="emailHelp" placeholder="Ex. São Paulo">
+                    <input name="city" type="text" class="form-control" id="from" aria-describedby="emailHelp" placeholder="Ex. São Paulo">
                 </div>
                 <div class="form-group col">
                     <label for="to">Destino</label>
@@ -72,6 +72,24 @@
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
+
+        <section id="others-team" class="others-team">
+            <div th:each="route : ${routes}" class="container" data-aos="fade-up">    
+                <div class="row gy-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-people"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                                <p th:text="${route.cityFrom}">...</p>
+                                <p th:text="${route.cityTo}">...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
 
         <section>
             <div class="card-group">

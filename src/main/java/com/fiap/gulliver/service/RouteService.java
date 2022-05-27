@@ -16,8 +16,11 @@ public class RouteService implements IRouteService {
 
     @Override
     public List<Route> findAll() {
-        // var cities = ;
-
         return (List<Route>) repository.findAll();
+    }
+
+    @Override
+    public List<Route> getByCityName(String city) {
+        return repository.getByCityName(city);
     }
 }

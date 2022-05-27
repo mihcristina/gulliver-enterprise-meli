@@ -1,7 +1,26 @@
-INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Campinas');
-
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Acre');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Alagoas');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Amapá');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Amazonas');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Bahia');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Ceará');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Espírito Santo');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Goiás');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Maranhão');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Mato Grosso');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Mato Grosso do Sul');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Minas Gerais');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Pará');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Paraíba');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Paraná');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Pernambuco');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Piauí');
 INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Rio de Janeiro');
-
-INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Belém');
-
-INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Londrina');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Rio Grande do Norte');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Rio Grande do Sul');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Rondônia');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Roraima');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Santa Catarina');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Sergipe');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Tocantins');
+INSERT INTO routes(city_to, city_from) VALUES('São Paulo', 'Distrito Federal');

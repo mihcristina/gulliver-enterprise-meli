@@ -22,11 +22,6 @@ public class PagesController {
         return "contact";
     }
 
-    @GetMapping("/travel-plus")
-    public String travelPlus(Model model) {
-        return "travel_plus";
-    }
-
     @GetMapping("/bedroom")
     public String bedroom(Model model) {
         return "bedroom-host";
