@@ -294,11 +294,6 @@ section {
     display: block;
 }
 
-form {
-    width: 50% !important;
-
-}
-
 button {
     background-color: #AA01FF !important;
     margin: 5% !important;

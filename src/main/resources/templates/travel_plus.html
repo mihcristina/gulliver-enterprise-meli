@@ -73,20 +73,27 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
 
-        <section id="others-team" class="others-team">
-            <div th:each="route : ${routes}" class="container" data-aos="fade-up">    
-                <div class="row gy-4">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-people"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                                <p th:text="${route.cityFrom}">...</p>
-                                <p th:text="${route.cityTo}">...</p>
-                            </div>
-                        </div>
-                    </div>
+        <section>
+            <div th:each="route : ${routes}" class="card text-center">
+                <div class="card-header">
+                    Destaque
                 </div>
+                <div class="card-body">
+                    <h5 th:text="${route.cityFrom}" class="card-title">...</h5>
+                    <p class="card-text">é seu destino escolhido? Clique no botão abaixo</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                </div>
+                <div class="card-footer text-muted">
+                    2 dias atrás
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div th:each="route : ${routes}" class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li th:text="${route.cityFrom}" class="list-group-item">...</li>
+                </ul>
             </div>
         </section>
     
