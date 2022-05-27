@@ -9,3 +9,5 @@ Foi utilizada a plataforma Heroku para fazer o deploy e conta também conta com 
 - Surdez
 - Deficiência visual
 - Dislexia
+
+![](layout.png)
