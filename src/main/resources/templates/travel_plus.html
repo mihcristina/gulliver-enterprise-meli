@@ -9,12 +9,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="shortcut icon" href="./imgs/1.png" type="image/x-icon">
     <title>Viaja+</title>
+
+    <!--JS-->
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/bootstrap.min.js"></script>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </head>
 <body>
 
     <header id="header" class="header fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-    
+
             <a href="/" class="logo d-flex align-items-center">
                 <img src="./imgs/logo.png" alt="Círculo três cores com a escrita GulliverTraveller">
             </a>
@@ -49,11 +58,12 @@
         <img src="./imgs/38.png" alt="">
     </section>
 
-        <form class="forms-control">
+        <form class="forms-control" autocomplete="off">
             <div class="row">
                 <div class="form-group col">
-                    <label for="from">Origem</label>
-                    <input name="city" type="text" class="form-control" id="from" aria-describedby="emailHelp" placeholder="Ex. São Paulo">
+                    <label for="input">Origem</label>
+                    <input name="city" type="text" class="form-control" id="input" placeholder="Ex. São Paulo">
+                    <ul class="list"></ul>
                 </div>
                 <div class="form-group col">
                     <label for="to">Destino</label>
@@ -73,68 +83,6 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
 
-        <section>
-            <div th:each="route : ${routes}" class="card text-center">
-                <div class="card-header">
-                    Destaque
-                </div>
-                <div class="card-body">
-                    <h5 th:text="${route.cityFrom}" class="card-title">...</h5>
-                    <p class="card-text">é seu destino escolhido? Clique no botão abaixo</p>
-                    <a href="#" class="btn btn-primary">Visitar</a>
-                </div>
-                <div class="card-footer text-muted">
-                    2 dias atrás
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <div th:each="route : ${routes}" class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li th:text="${route.cityFrom}" class="list-group-item">...</li>
-                </ul>
-            </div>
-        </section>
-    
-
-        <section>
-            <div class="card-group">
-                <div class="card">
-                    <img class="card-img-top" src="./imgs/cidade1.png" alt="Foto com Cristo Redentor">
-                    <div class="card-body">
-                        <h5 class="card-title">Viagem para Rio de Janeiro</h5>
-                        <p class="card-text">A partir de 100,00</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Aproveite</small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="./imgs/cidade2.png" alt="Cidade de São Paulo">
-                    <div class="card-body">
-                        <h5 class="card-title">Viagem para São Paulo</h5>
-                        <p class="card-text">A partir de 69,00</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Aproveite</small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="./imgs/cidade3.png" alt="Casas de Gramado - Rio grande do Sul">
-                    <div class="card-body">
-                        <h5 class="card-title">Viagem para Rio grande do Sul</h5>
-                        <p class="card-text">A partir de 268,00</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Aproveite</small>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    
-
     <footer id="footer" class="footer">
         <div class="container">
             <div class="copyright">
@@ -146,10 +94,6 @@
         </div>
     </footer>
     
-    <!--JS-->
-    <script src="./js/main.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-
     <!--acessibilidade-->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -157,10 +101,6 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+
 </body>
-<script src="./js/functions.js"></script>
 </html>

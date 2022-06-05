@@ -155,41 +155,6 @@
     }
   });
 
-  /**
-   * Clients Slider
-   */
-  new Swiper('.clients-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60
-      },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120
-      }
-    }
-  });
 
   /**
    * Porfolio isotope and filter
@@ -220,56 +185,6 @@
 
   });
 
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfokio-lightbox'
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 40
-      },
-
-      1200: {
-        slidesPerView: 3,
-      }
-    }
-  });
 
   /**
    * Animation on scroll
@@ -287,3 +202,38 @@
   });
 
 })();
+
+let states = ["São Paulo", "Rio de Janeiro", "Rio Grande do Sul"];
+
+let input = document.getElementById("input");
+
+console.log('inout', input)
+
+input.addEventListener("keyup", (e) => {
+  removeElements();
+    for (let i of states) {
+      if (
+        i.toLowerCase().startsWith(input.value.toLowerCase()) && input.value != ""
+      ) {
+        let listItem = document.createElement("li");
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayNames('"+ i + "')");
+        let word = "<b>" + i.substring(0, input.value.length) + "</b>"
+        word += i.substring(input.value.length);
+        listItem.innerHTML = word;
+        document.querySelector(".list").appendChild(listItem);
+      }
+    }
+});
+
+function displayNames(value) {
+  input.value = value;
+}
+
+function removeElements() {
+  let itemss = document.querySelectorAll(".list-items");
+  itemss.forEach((item) => {
+    item.remove();
+  });
+}

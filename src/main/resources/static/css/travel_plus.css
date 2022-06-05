@@ -298,3 +298,20 @@ button {
     background-color: #AA01FF !important;
     margin: 5% !important;
 }
+
+ul li {
+    list-style: none !important;
+}
+
+.list {
+    width: 100%;
+    background-color: #ffff;
+}
+
+.list-items {
+    padding: 10px 5px;
+}
+
+.list-items:hover{
+    background-color: #dddd;
+}
