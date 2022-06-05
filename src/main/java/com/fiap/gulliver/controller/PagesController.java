@@ -31,4 +31,9 @@ public class PagesController {
     public String usefulTips(Model model) {
         return "useful_tips";
     }
+
+    @GetMapping("/rent-your-car")
+    public String rentYourCar(Model model) {
+        return "rent-your-car";
+    }
 }
