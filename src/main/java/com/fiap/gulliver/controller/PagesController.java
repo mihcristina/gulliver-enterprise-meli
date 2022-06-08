@@ -36,4 +36,9 @@ public class PagesController {
     public String rentYourCar(Model model) {
         return "rent-your-car";
     }
+
+    @GetMapping("/culture")
+    public String culture(Model model) {
+        return "culture";
+    }
 }
