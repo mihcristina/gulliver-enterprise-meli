@@ -1,15 +1,7 @@
-/**
-* Template Name: FlexStart - v1.9.0
-* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
-  /**
-   * Easy selector helper function
-   */
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -19,9 +11,7 @@
     }
   }
 
-  /**
-   * Easy event listener function
-   */
+  
   const on = (type, el, listener, all = false) => {
     if (all) {
       select(el, all).forEach(e => e.addEventListener(type, listener))
@@ -30,16 +20,10 @@
     }
   }
 
-  /**
-   * Easy on scroll event listener 
-   */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
 
-  /**
-   * Navbar links active state on scroll
-   */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
